@@ -1,16 +1,26 @@
-'use strict';
+'use strict'
 
-const POSTGRES_URI =process.env.POSTGRES_URI || "postgres://postgres:0000@localhost:5432/authdb";
+
+
+require('dotenv').config();
 const { Sequelize, DataTypes } = require('sequelize');
-const user = require('./user');
 
-var Sql= new Sequelize(POSTGRES_URI, {});
+const users=require('./user')
+const DATABASE_URL = process.env.DATABASE_URL;
 
+const DATABASE_CONFIG = {
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    }
+  }
+}
 
-module.exports={
+const sequelize = new Sequelize(DATABASE_URL, DATABASE_CONFIG);
 
-db:Sql,
-user:user(Sql,DataTypes),
-
-
+module.exports = {
+    db: sequelize,
+    users: users(sequelize, DataTypes),
+    
 }
