@@ -12,11 +12,11 @@
 
 
 
-* [GitHub Repo Link]()
+* [GitHub Repo Link](https://github.com/MAMOUN-kamal-alshisani/bearer-auth)
 
-* [Pull Request]()
+* [Pull Request](https://github.com/MAMOUN-kamal-alshisani/bearer-auth/pull/1)
 
-* [Heroku Link]() 
+* [Heroku Link](https://bearerauth1.herokuapp.com/) 
 
 
 ##### Setup
