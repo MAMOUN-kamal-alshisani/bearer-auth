@@ -2,10 +2,6 @@
 
 
 
-# basic-auth
-
-
-
 ## uml :
 
 ![](lab07.jpg)
